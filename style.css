@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+    
+}
+
+.container{
+    display: grid;
+    gap: 10px 20px;
+    grid-template-columns: 0.5fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 3fr;
+}
+
+.dashboard{
+    grid-area: 1/1/span 3/1;
+    border: 2px solid blue;
+}
+
+.header{
+    grid-area: 1/2/2/span 2;
+    border: 2px solid blue;
+}
+
+.trending{
+    grid-area: 2/2/2/2;
+    border: 2px solid blue;
+}
+.projects{
+    grid-area: 3/2/3/2;
+    border: 2px solid blue;
+}
+
+.anouncements{
+    grid-area: 2/3/span 2/3;
+    border: 2px solid blue;
+}
