@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <div class="dashboard">
+            <img src="dashboard.svg" alt="">
             <ul>
                 <li><a href="">Home</a></li>
                 <li><a href="">Profile</a></li>
@@ -18,21 +20,26 @@
             </ul>          
         </div>
         <div class="header">
-            <input type="text">
-            <div class="rightbar">
-                <img src="" alt="">
-                <h3>Ha Nguyen</h3>
-            </div>
+            
             <div class="leftbar">
-                <img src="" alt="">
-                <p>Hello</p>
-                <h2>Ha Nguyen</h2>
+                <img src="logo.png" class="logo" alt="logo">
+                <div class="header-content">
+                    <p>Hello</p>
+                    <h2>Ha Nguyen</h2>
+                </div>
             </div>
+    
             <div class="navbar">
-                <button class="new">New</button>
-                <button class="upload">Upload</button>
-                <button class="share">Share</button>
-            </div>
+                <div class="search">
+                    Search: <input type="text">
+                </div>
+                <div class="button">
+                    <button class="new">New</button>
+                    <button class="upload">Upload</button>
+                    <button class="share">Share</button>
+                </div>
+                
+            </div>     
         </div>
         <div class="trending">
             <div class="trend-1">
@@ -76,6 +83,7 @@
                 <p>There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..</p>
             </div>
         </div>
+        <div class="footer">Copyright © Ha Nguyen</div>
         
     </div>
 </body>
