@@ -1,8 +1,14 @@
 :root{
     --text-color: white;
+    --conten-color: #2E4F4F;
+    --border-radius: 5px;
+    --padding: 10px;
+    --font-size: 1.2rem;
+    --bgrc-body: linear-gradient(to right, #252B48, #AFD3E2);
+    --bgrc-dashboard: linear-gradient(to bottom, #DDF7E3, #7EAA92)
 }
 body{
-    background-color: #252B48;
+    background-image: var(--bgrc-body);
     color: var(--text-color);
     margin: 0;
 }
@@ -25,31 +31,37 @@ body{
     grid-area: 1/1/span 3/1;
     border: 2px solid blue;
     padding: 50px 10px;
-    background-color: #7EAA92;
+    background-image: var(--bgrc-dashboard);
+    
 }
 .dashboard img{
     fill: white;
 }
 .dashboard li{
     list-style-type: none;
-    margin-bottom: 10px;
+    margin-bottom: calc(var(--padding) * 2);
     
 }
 .dashboard a{
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--conten-color);
+    font-size: var(--font-size);
 }
 
 .header{
     grid-area: 1/2/1/span 2;
     border: 2px solid blue;
     display: flex;
-    justify-content: space-around;
-    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding);
+    flex-wrap: wrap;
 }
 
 .leftbar{
     display: flex;
+    align-self: flex-start;
+    gap: var(--padding);
 }
 
 .logo {
@@ -57,15 +69,54 @@ body{
     height: auto;
 }
 
+#author{
+    text-align: right;
+}
 .navbar{
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    gap: calc(var(--padding) * 2);
+    margin-right: calc(var(--padding) * 5);
 }
 
-button{
-    margin-right: 30px;
+.nav-container{
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--padding) * 3);
+    margin-right: calc(var(--padding) * 2);
 }
+
+.cute-icon img{
+    width: 100px;
+    height: auto;
+}
+.search{
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding);
+}
+#search-svg{
+    width: 1rem;
+}
+button{
+    border-radius: var(--border-radius);
+    padding: calc(var(--padding)/2) var(--padding);
+    color: var(--text-color);
+    font-weight: bold;
+    background-color: rgb(73, 130, 168);
+    
+}
+
+button:hover{
+    background-color: aquamarine;
+    cursor: pointer;
+}
+
+button.upload{
+    margin: 0 var(--padding);
+    
+}
+
+
 
 
 .trending{
@@ -91,6 +142,7 @@ button{
 }
 .projects > *{
     border: 2px solid yellow;
+    
 }
 
 .anouncements{
@@ -102,6 +154,7 @@ button{
 }
 .anouncements > *{
     border: 2px solid pink;
+    
 }
 
 .footer{
